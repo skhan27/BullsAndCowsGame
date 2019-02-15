@@ -53,7 +53,7 @@ void PlayGame()
 
 bool AskToPlayAgain()
 {
-	std::cout << "Do you want to play again with the same hidden word? (y/n)";
+	std::cout << "Do you want to play again? (y/n)";
 	FText Response = "";
 	std::getline(std::cin, Response);
 
@@ -103,7 +103,7 @@ FText GetValidGuess() {
 
 		switch (Status) {
 		case EWordStatus::Wrong_Length:
-			std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << "letter word.\n";
+			std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " letter word.\n";
 			break;
 		case EWordStatus::Not_Isogram:
 			std::cout << "Please enter a word without repeating letters\n";
